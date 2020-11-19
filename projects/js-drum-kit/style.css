@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Epilogue&family=Space+Grotesk:wght@700&display=swap');
+
+html {
+  background: url('./img/yannis-papanastasopoulos-yWF2LLan-_o-unsplash-large.jpg')
+    fixed center no-repeat;
+  background-size: cover;
+}
+
+body {
+  font-family: 'Epilogue', sans-serif;
+}
+
+.wrapper {
+  min-height: 100vh;
+  padding: 4rem;
+  display: flex;
+  justify-items: center;
+  align-items: center;
+}
+
+.keys {
+  width: 100%;
+  display: grid;
+  gap: 1.6rem;
+  grid-template-columns: repeat(auto-fit, minmax(6.4rem, 9.6rem));
+  align-content: center;
+  justify-content: center;
+}
+
+.key {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 0.4rem solid rgba(59, 59, 59, 0.8);
+  border-radius: 0.5rem;
+  font-size: 1.8rem;
+  padding: 1.2rem 0.5rem;
+  transition: all 0.07s ease;
+  color: white;
+  background: inherit;
+  text-shadow: 0 0 0.5rem rgb(19, 19, 19);
+  position: relative;
+  background: inherit;
+  overflow: hidden;
+}
+
+.key::before {
+  content: '';
+  position: absolute;
+  width: 120%;
+  height: 120%;
+  top: -0.8rem;
+  left: -0.8rem;
+  background: inherit;
+  backdrop-filter: blur(4px);
+  -moz-backdrop-filter: blur(4px);
+  box-shadow: inset 0 0 0 200px rgba(255, 255, 255, 0.4);
+  z-index: -1;
+}
+
+.playing {
+  transform: scale(1.1);
+  border-color: #ffc600;
+  box-shadow: 0 0 1rem #ffc600;
+}
+
+kbd {
+  display: block;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 6.4rem;
+  font-weight: 700;
+}
+
+.sound {
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  color: #ffc600;
+}
+
+@media screen and (max-width: 960px) {
+  html {
+    background: url('./img/yannis-papanastasopoulos-yWF2LLan-_o-unsplash-medium.jpg')
+      fixed center no-repeat;
+  }
+}

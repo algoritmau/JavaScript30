@@ -1,0 +1,80 @@
+html {
+  background: #018ded url(https://unsplash.it/1500/1000?image=881&blur=5);
+  background-size: cover;
+  font-family: 'helvetica neue';
+  text-align: center;
+  font-size: 10px;
+}
+
+body {
+  margin: 0;
+  font-size: 2rem;
+  display: flex;
+  flex: 1;
+  min-height: 100vh;
+  align-items: center;
+}
+
+.clock {
+  width: 30rem;
+  height: 30rem;
+  border: 12px solid rgba(255, 255, 255, 0.8);
+  border-radius: 50%;
+  margin: 50px auto;
+  position: relative;
+  padding: 2.4rem;
+  box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.1), inset 0 0 0 3px #efefef80,
+    inset 0 0 10px black, 0 0 10px rgba(0, 0, 0, 0.2);
+  background: inherit;
+  backdrop-filter: blur(16px);
+}
+
+.clock__dial {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform: translateY(-3px); /* account for the height of the clock hands */
+}
+
+.clock__dial::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: lavender;
+  z-index: 10;
+}
+
+.clock__hand {
+  width: 50%;
+  height: 6px;
+  background: rgba(0, 0, 0, 0.4);
+  position: absolute;
+  top: 50%;
+  transform: rotate(90deg);
+  transform-origin: 100%;
+  transition: all 0.04s;
+  transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
+}
+
+.clock__hand--hours::before {
+  content: '';
+  width: 40%;
+  height: 1px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-72%, -50%);
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.48);
+  z-index: 10;
+}
+
+.clock__hand--seconds {
+  border: 1px solid rgba(0, 0, 0, 0.4);
+  background: inherit;
+}
