@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@1,500&family=Inter&display=swap');
+
+:root {
+  --base: #ffc600;
+  --spacing: 10px;
+  --blur: 10px;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.heading {
+  font-family: 'IBM Plex Mono', 'Helvetica Neue', Helvetica, sans-serif;
+  font-weight: 700;
+  font-size: 4.4rem;
+  text-align: center;
+  width: 80vw;
+  margin-block-end: 4rem;
+}
+
+.heading__highlight {
+  color: var(--base);
+}
+
+img {
+  margin-block-end: 2.4rem;
+  width: 88vw;
+  max-width: 64rem;
+  padding: var(--spacing);
+  background: var(--base);
+  filter: blur(var(--blur));
+  border-radius: 4px;
+}
+
+.controls {
+  width: 88vw;
+  max-width: 64rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+@media screen and (max-width: 800px) {
+  .heading {
+    font-size: 3.8rem;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  img {
+    max-width: 72vw;
+  }
+
+  .controls {
+    flex-direction: column;
+  }
+
+  .control:not(:last-of-type) {
+    margin-block-end: 2rem;
+  }
+}
