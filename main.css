@@ -101,8 +101,8 @@ h1 {
 h3 {
   font-family: var(--font-body-copy);
   font-weight: 200;
-  font-size: 3.2rem;
-  width: 80%;
+  font-size: 2.5rem;
+  width: 64%;
 }
 
 .text-gradient {
