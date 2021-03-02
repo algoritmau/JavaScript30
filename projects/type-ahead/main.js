@@ -35,13 +35,13 @@ const renderMatches = (e) => {
       );
 
       return `
-      <li class="search-results-list__item">
-        <span class="name">${highlightedCity}, ${highlightedState}</span>
-        <span class="population">${formatNumberWithCommas(
-          result.population
-        )}</span>
-      </li>
-    `;
+        <li class="search-results-list__item">
+          <span class="name">${highlightedCity}, ${highlightedState}</span>
+          <span class="population">${formatNumberWithCommas(
+            result.population
+          )}</span>
+        </li>
+      `;
     })
     .join('');
 
@@ -50,13 +50,5 @@ const renderMatches = (e) => {
 
 searchInput.addEventListener('change', renderMatches);
 searchInput.addEventListener('keyup', renderMatches);
-
-// city: "Los Angeles"
-// growth_from_2000_to_2013: "4.8%"
-// latitude: 34.0522342
-// longitude: -118.2436849
-// population: "3884307"​
-// rank: "2"
-// state: "California"
 
 getCities();
