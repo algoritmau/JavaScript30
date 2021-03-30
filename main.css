@@ -156,6 +156,7 @@ h3 {
 }
 
 .project__title {
+  width: 96%;
   font-family: var(--font-body-copy);
   font-weight: 600;
   font-style: normal;
